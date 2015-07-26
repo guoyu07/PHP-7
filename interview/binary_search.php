@@ -16,10 +16,7 @@ function binary_search($ar , $search_key)
             $low = $mid + 1;
         }
     }
-    if($low > $high){
-        return -1 ;
-    }
-    
+    return -1 ;
 }
 
 var_dump(binary_search($arr , 25));
