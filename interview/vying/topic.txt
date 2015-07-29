@@ -1,4 +1,6 @@
 1.http 502,504 什么意思，什么情况下会产生这种错码
+这里有篇博文，已经说的很清楚了
+http://www.ttlsa.com/web/analysis-of-site-502-and-504-error/
 
 2.如何实现秒杀
 
@@ -6,4 +8,5 @@
 
 4.rabbitMQ建立连接的过程
 
-5.
+5.如何实现php出错日志记录
+
