@@ -16,6 +16,5 @@ $server->bind($endpoint);
 printf("I: Echo service is ready at %s\n", $endpoint);
 while (true) {
     $msg = $server->recvMulti();
-    var_dump($msg);
     $server->sendMulti($msg);
 }
