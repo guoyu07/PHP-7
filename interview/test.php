@@ -1,4 +1,5 @@
 <?php
+/*
 $flag = is_dir('vying');
 var_dump($flag);
 
@@ -22,3 +23,12 @@ function shutdown()
 }
 echo "abccc";
 register_shutdown_function('shutdown');
+*/
+$string = "Hello world";
+$len = strlen($string);
+for ($i=0 ;$i<$len/2;$i++){
+    $back = $len - $i - 1;
+    list($string{$i} , $string{$back}) = array($string{$back} ,$string{$i});
+}
+
+echo $string ;
