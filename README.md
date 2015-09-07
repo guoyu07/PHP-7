@@ -15,3 +15,10 @@
 中数据显示正确，当调用increment方法，对存储元素 值增加1时，发现并不是所有的服务器都修改了。
 
 这个使用中要特别注意，防止掉坑里了
+
+
+###PHP安装配置项
+
+在安装php的是增加--with-config-file-scan-dir=/etc/php.d  configure选项会去/etc/php.d目录下读取配置文件
+
+这样可避免单个php.ini文件的问题，增加配置文件灵活性
