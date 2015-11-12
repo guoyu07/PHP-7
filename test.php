@@ -5,3 +5,13 @@ if(mb_strlen($file_name) > 10) {
 }
 echo $file_name ;
 
+function jiecheng($n)
+{
+    echo $n . "\n";
+    if($n == 1) {
+        return $n ;
+    }
+    return $n * jiecheng($n-1) ;
+}
+
+echo jiecheng(5);
