@@ -1,17 +1,12 @@
 <?php
-$file_name = "喝啊大叔啊是的V在程序执行阿斯顿爱仕达阿斯顿发生的发生大的事dwfasdfadsafasd";
-if(mb_strlen($file_name) > 10) {
-    $file_name = mb_substr($file_name, 0 , 3) .'...'.mb_substr($file_name, -3) ;
-}
-echo $file_name ;
-
-function jiecheng($n)
-{
-    echo $n . "\n";
-    if($n == 1) {
-        return $n ;
-    }
-    return $n * jiecheng($n-1) ;
-}
-
-echo jiecheng(5);
+include "logfile.php" ;
+LogFile::info('test1');
+LogFile::info('test2');
+LogFile::info('test3');
+LogFile::info('test4');
+LogFile::info('test5');
+LogFile::info('test6');
+LogFile::info('test7');
+LogFile::info('test8');
+LogFile::info('test9');
+register_shutdown_function(array('LogFile','shutdown_func') ) ; 
