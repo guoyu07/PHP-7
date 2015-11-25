@@ -111,31 +111,31 @@ class LogFile
 
     public static function info($log)
     {
-        $log_txt = sprintf(self::$log_tpl , date('Y-m-d H:i:s') , '127.0.0.1' , 'info' , $log) ;
+        $log_txt = sprintf(self::$log_tpl , date('Y-m-d H:i:s') , real_ip() , 'info' , $log) ;
         self::write($log_txt , 'info') ;
     }
 
     public static function notice($log)
     {
-        $log_txt = sprintf(self::$log_tpl , date('Y-m-d H:i:s') , '127.0.0.1' , 'notice' , $log) ;
+        $log_txt = sprintf(self::$log_tpl , date('Y-m-d H:i:s') , real_ip() , 'notice' , $log) ;
         self::write($log_txt , 'notice') ;
     }
 
     public static function warn($log)
     {
-        $log_txt = sprintf(self::$log_tpl , date('Y-m-d H:i:s') , '127.0.0.1' , 'warning' , $log) ;
+        $log_txt = sprintf(self::$log_tpl , date('Y-m-d H:i:s') , real_ip() , 'warning' , $log) ;
         self::write($log_txt , 'warn') ;
     }
 
     public static function debug($log)
     {
-        $log_txt = sprintf(self::$log_tpl , date('Y-m-d H:i:s') , '127.0.0.1' , 'debug' , $log) ;
+        $log_txt = sprintf(self::$log_tpl , date('Y-m-d H:i:s') , real_ip() , 'debug' , $log) ;
         self::write($log_txt , 'debug') ;
     }
 
     public static function error($log)
     {
-        $log_txt = sprintf(self::$log_tpl , date('Y-m-d H:i:s') , '127.0.0.1' , 'error' , $log) ;
+        $log_txt = sprintf(self::$log_tpl , date('Y-m-d H:i:s') , real_ip() , 'error' , $log) ;
         self::write($log_txt , 'error') ;
     }
 

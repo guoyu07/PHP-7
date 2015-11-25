@@ -1,5 +1,23 @@
 <?php
-include "logfile.php" ;
+function asdf() {
+     echo microtime(true) . '<br>';
+     sleep(1);
+     echo microtime(true) . '<br>';
+     sleep(1);
+     echo microtime(true) . '<br>';
+ }
+
+register_shutdown_function('asdf');
+try
+{
+    echo "Hello"
+}
+catch(Exception $e){
+   echo $e->getMessage();
+}
+set_time_limit(1);
+
+exit;
 LogFile::info('test1');
 LogFile::info('test2');
 LogFile::info('test3');
