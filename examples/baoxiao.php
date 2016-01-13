@@ -96,4 +96,13 @@ function print_plan($year , $month)
     }
 }
 
-print_plan(2016, 1) ;
+if($argc == 3) {
+    $year = $argv[1] ;
+    $month = $argv[2] ;
+}else if($argc == 2) {
+    $year = date('Y');
+    $month = $argv[1] ;
+} else {
+    exit("please input month\n") ;
+}
+print_plan($year, $month) ;
