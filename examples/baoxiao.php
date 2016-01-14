@@ -1,10 +1,10 @@
 <?php
 /**
  * 根据年份，月份获取工作日
- * @param  [type] $year  [description]
- * @param  [type] $month [description]
- * @param  [type] $days  [description]
- * @return [type]        [description]
+ * @param   $year  
+ * @param   $month 
+ * @param   $days  
+ * @return         
  */
 function get_work_days($year , $month)
 {
@@ -80,11 +80,11 @@ function home_time($year , $month , $day)
     return $start_time ."\t".$end_time ;
 }
 
-function print_plan($year , $month)
+function print_plan($year , $month , $count = 15)
 {
     $work_days = get_work_days($year , $month) ;
     $shuffle_work_days = shuffle($work_days) ;
-    $use_work_days = array_slice($work_days , 0 , 15) ;
+    $use_work_days = array_slice($work_days , 0 , $count) ;
     sort($use_work_days) ;
     foreach($use_work_days as $k => $day) {
         $rand = rand(0,100) ;
@@ -96,13 +96,15 @@ function print_plan($year , $month)
     }
 }
 
+$count = 15 ;
 if($argc == 3) {
-    $year = $argv[1] ;
-    $month = $argv[2] ;
+    $year   = $argv[1] ;
+    $month  = $argv[2] ;
 }else if($argc == 2) {
-    $year = date('Y');
-    $month = $argv[1] ;
+    $year   = date('Y');
+    $month  = $argv[1] ;
 } else {
-    exit("please input month\n") ;
+    $year   = date('Y' , strtotime('-1 month')) ;
+    $month  = date('m' , strtotime('-1 month')) ;
 }
-print_plan($year, $month) ;
+print_plan($year, $month , $count) ;
