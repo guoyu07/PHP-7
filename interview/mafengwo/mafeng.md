@@ -22,6 +22,6 @@ http://www.cnblogs.com/benshan/archive/2013/01/17/2865286.html
 4.explain查询语句key_len 长度如何计算
 
 5.二维数组排序问题，针对数组的某一列排序
-
+array_multisort
 
 6.mysql索引 最左原则的使用
