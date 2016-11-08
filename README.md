@@ -1,14 +1,14 @@
-# PHP
+## PHP Notes ##
 
-###Memcache的使用
+**Memcache的使用**
 
 安装Memcached 及php memcache扩展后就可以
 
->$memcache = new Memcache ;
-
->$memcache->addServer('memcache_host' , memcache_port);//可添加多个
-
->$memcache->set('key','val','compress?','expire');
+	$memcache = new Memcache ;
+	
+	$memcache->addServer('memcache_host' , memcache_port);//可添加多个
+	
+	$memcache->set('key','val','compress?','expire');
 
 使用过程中发现一个问题，当先memcache服务器池中添加多个memcache的时候，set key 每个memcached服务器
 
@@ -17,7 +17,7 @@
 这个使用中要特别注意，防止掉坑里了
 
 
-###PHP安装配置项
+**PHP安装配置项**
 
 在安装php的是增加--with-config-file-scan-dir=/etc/php.d  configure选项会去/etc/php.d目录下读取配置文件
 
